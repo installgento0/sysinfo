@@ -14,14 +14,3 @@ println "CPU" "$(sed -n  's/model name//p' /proc/cpuinfo | head -1 | tr -d '\t'|
 println "GPU" "$(lspci | grep ' VGA ' | grep -o -P '(?<=controller:).*(?)')"
 println "Memory" "$(cat /proc/meminfo | grep -w "MemTotal" | grep -o -P '(?<= ).*(?)' | tr -s [:space:])"
 println "DE" "$XDG_CURRENT_DESKTOP"
-
-#May 10 2019
-#OS="$(lsb_release -d)"
-#Uptime="$(uptime -p)"
-#Shell="$(echo $SHELL)"
-#Monitor="$(xrandr | grep -w "primary" |grep -Eo '.*?[+0*#]')"
-#CPU="$(sed -n  's/model name//p' /proc/cpuinfo | head -1)"
-#GPU="$(lspci | grep ' VGA ' | grep -o -P '(?<=controller:).*(?)')"
-#MEM="$(cat /proc/meminfo | grep -w "MemTotal" | grep -o -P '(?<= ).*(?)')"
-#DE="$(echo $XDG_CURRENT_DESKTOP)"
-#echo -e "$(tput sgr0)OS "$(tput bold)${OS}"\n$(tput sgr0)Uptime: "$(tput bold)${Uptime}"\n$(tput sgr0)Shell: "$(tput bold)${Shell}" \n$(tput sgr0)Monitor: "$(tput bold)${Monitor}" \n$(tput sgr0)CPU:"$(tput bold)${CPU}" \n$(tput sgr0)GPU:"$(tput bold)${GPU}" \n$(tput sgr0)Memory:"$(tput bold)${MEM}" \n$(tput sgr0)DE:"$(tput bold)${DE}""
