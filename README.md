@@ -6,8 +6,6 @@ Use `sudo chmod +x ./fetch.sh` to make the file executable
 
 **Observations:**
 
-This script will NOT work (properly) under OSX and (most likely) BSD due to the usage of certain commands that aren't suited for said systems.
-
 No info will be shown under "DE" if the user has only a basic window manager such as i3/awesome/herbstluftwm and no desktop environment installed.
 
 Some desktop environments that aren't GNOME-based might not show up.
